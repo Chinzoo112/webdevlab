@@ -1,0 +1,17 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Demo web app WebDevLab",
+    "short_name": "Нүүр хуудас",
+    "scope": "/webdevlab/",
+    "display": "standalone",
+    "start_url": "https://chinzoo112.github.io/webdevlab/",
+    "background_color": "#ff630f",
+    "theme_color": "transparent",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "orientation": "any",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [],
+    "url": "https://chinzoo112.github.io/webdevlab/"
+}
