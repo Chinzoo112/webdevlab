@@ -6,137 +6,474 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Нүүр хуудас</title>
     <meta name="Description" content="Web development lab Webpage">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300&display=swap);
+        body {
+        color:#4E4D4D;
+        font-family:'Source Sans Pro',sans-serif;
+        font-size:12pt;
+        font-weight:400;
+        margin:0;
+        padding:0;
+        }
+        
+        #header {
+        background-color:#fff;
+        box-shadow:0 0 .15em 0 rgba(0,0,0,0.1);
+        height:3em;
+        left:0;
+        line-height:3em;
+        position:fixed;
+        top:0;
+        width:100%;
+        z-index:10000;
+        }
+        
+        #header h1 {
+        cursor:default;
+        font-size:1.25em;
+        height:3em;
+        left:1em;
+        line-height:3em;
+        position:absolute;
+        top:0;
+        }
+        
+        #header nav {
+        height:3em;
+        line-height:3em;
+        position:absolute;
+        right:.5em;
+        top:0;
+        }
+        
+        #header nav ul {
+        margin:0;
+        }
+        
+        #header nav ul li {
+        display:inline-block;
+        font-size:.9em;
+        margin-left:.1em;
+        }
+        
+        #header nav ul li a {
+        color:inherit;
+        display:inline-block;
+        height:3em;
+        line-height:3em;
+        outline:0;
+        padding:0 .3em;
+        text-decoration:none;
+        }
+        
+        @media screen and (max-width: 736px) {
+        #header {
+        height:2.5em;
+        line-height:2.5em;
+        }
+        
+        #header h1 {
+        height:2.5em;
+        left:0;
+        line-height:2.5em;
+        position:relative;
+        text-align:center;
+        top:0;
+        }
+        
+        #header h1 a {
+        font-size:1em;
+        }
+        
+        #header nav {
+        display:none;
+        }
+        }
+        
+        body {
+        padding-top:3em;
+        }
+        
+        @media screen and (max-width: 736px) {
+        body {
+        padding-top:2.5em;
+        }
+        }
+        
+        header {
+        line-height:1.7em;
+        margin-bottom:2em;
+        }
+        
+        header h2 {
+        font-size:2.5em;
+        }
+        
+        header .byline {
+        display:block;
+        font-size:1.4em;
+        margin:.5em 0 0;
+        padding:0 0 .5em;
+        text-transform:uppercase;
+        }
+        
+        .button {
+        background: orangered;
+        border-radius:3px;
+        color:#FFF;
+        cursor:pointer;
+        display:inline-block;
+        font-size:1em;
+        margin-top:.5em;
+        padding:.5em;
+        position:relative;
+        text-decoration:none;
+        text-transform:uppercase;
+        width:auto;
+        }
+        
+        .button:hover {
+        background:#de3d27;
+        color:#FFF!important;
+        }
+        
+        .header {
+        background:#FFF;
+        position:relative;
+        }
+        
+        .main-menu {
+        padding:4em 0;
+        position:relative;
+        }
+        
+        main .section {
+        display:block;
+        margin:.5em 0 0;
+        padding:0 0 .5em;
+        }
+        
+        .container {
+        margin:0 auto;
+        width:1200px;
+        }
+        
+        #page {
+        overflow:hidden;
+        padding:6em 0;
+        }
+        
+        #content {
+        float:left;
+        text-align:center;
+        width:588px;
+        }
+        
+        #content .title {
+        padding:1em 2em 2em;
+        text-align:center;
+        }
+        
+        #content h2 {
+        font-size:2em;
+        }
+        
+        #content .byline {
+        font-size:1.5em;
+        padding-top:0;
+        }
+        
+        .title {
+        text-align:center;
+        }
+        
+        .title h2 {
+        color:#3f3f3f;
+        font-weight:700;
+        letter-spacing:.1em;
+        text-transform:uppercase;
+        }
+        
+        .title .byline {
+        display:block;
+        font-size:1.1em;
+        font-weight:300;
+        padding-top:0;
+        }
+        
+        #sidebar {
+        float:right;
+        width:588px;
+        }
+        
+        .image img {
+        display:block;
+        width:100%;
+        }
+        
+        .image-full {
+        display:block;
+        margin:0;
+        width:100%;
+        }
+        
+        .image-left {
+        float:left;
+        margin:0 3em 3em 0;
+        }
+        
+        #recent-wrapper {
+        background:#FFF;
+        }
+        
+        #recent h2 {
+        text-align:center;
+        }
+        
+        #recent .icon {
+        color:#FFF;
+        display:block;
+        font-size:4em;
+        line-height:1.5em;
+        margin:0 auto 20px;
+        position:relative;
+        text-align:center;
+        }
+        
+        .column1,.column2,.column3,.column4 {
+        width:282px;
+        }
+        
+        .column1,.column2 {
+        float:left;
+        margin-right:24px;
+        }
+        
+        .column3 {
+        float:left;
+        }
+        
+        .column4 {
+        float:right;
+        }
+        
+        #ontsloh-wrapper {
+        padding:8em 0 6em;
+        }
+        
+        #ontsloh {
+        overflow:hidden;
+        text-align:center;
+        }
+        
+        #ontsloh .major h2,#ontsloh .major .byline {
+        color:rgba(255,255,255,0.9);
+        }
+        
+        #ontsloh img {
+        margin:0;
+        padding:0;
+        }
+        
+        #ontsloh .box {
+        background:#AB9691;
+        border-left:1px solid #DADADA;
+        border-radius:0 0 8px 8px;
+        border-right:1px solid #DADADA;
+        padding:30px;
+        }
+        
+        #contact .major h2,#contact .major .byline {
+        color:rgba(255,255,255,0.9);
+        }
+        
+        ul.contact {
+        margin:0 0 3em;
+        overflow:hidden;
+        padding-top:1em;
+        text-align:center;
+        }
+        
+        ul.contact li {
+        display:inline-block;
+        font-size:1em;
+        padding:0 .3em;
+        }
+        
+        ul.contact li span {
+        display:none;
+        margin:0;
+        padding:0;
+        }
+        
+        ul.contact li a {
+        color:#FFF;
+        }
+        
+        ul.contact li a:before {
+        color:rgba(255,255,255,.3);
+        display:inline-block;
+        font-size:2em;
+        height:40px;
+        line-height:40px;
+        text-align:center;
+        width:40px;
+        }
+        
+        #copyright {
+        overflow:hidden;
+        padding:5em 0;
+        }
+        
+        #copyright p {
+        color:#6F6F6F;
+        font-size:.8em;
+        letter-spacing:.2em;
+        text-align:center;
+        text-transform:uppercase;
+        }
+        
+        #copyright a {
+        color:#8C8C8C;
+        text-decoration:none;
+        }
+        
+        footer {
+        background-color:#282220;
+        }
+        img:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+        }
+
+        @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+	</style>
+    <link rel="preconnect" href="https://api.jsonbin.io">
+    <link rel="preload" as="script" href="moduleNews.js" crossorigin="anonymous">
+    <script src="main.js" type="module"></script>
+    
 </head>
-<body>
-    <header class="main-header">
-        <a href="medee.html"> <img src="images/unreadlogo.png" alt="logo" class="logo" width="200" height="120"></a>
-        <nav class="main-menu">
-            <ul class="main-menu-list">
-                <li class="menu-item"><a href="medee.html">Technology</a> </li>
+    <body>
+        <header id="header">
+            <a href="medee.html"> <img src="images/unreadlogo.png" alt="logo" class="logo" width="200" height="47`"></a>
+            <nav>
+            <ul>
+                <li class="menu-item"><a class="menu-tem-link" href="/technology">Technology</a> </li>
                 <li class="menu-item"><a href="medee.html">Watch</a> </li>
                 <li class="menu-item"><a href="medee.html">Recommends</a> </li>
                 <li class="menu-item"><a href="medee.html">Book</a> </li>
                 <li class="menu-item"><a href="medee.html">Podcast</a> </li>
-            </ul>
-            <ul class="icons">
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/searchicon.png" alt="" width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/searchicon.png" alt="" width="15" height="15"/></a>
                 </li>
                 <li>
-                    <a href="medee.html"><img style="margin-right: 15px;" src="images/mailicon.png" alt="#"  width="20" height="20"/>Work with us</a>
+                    <a href="medee.html"><img style="margin-right: 15px;" src="images/mailicon.png" alt="#"  width="15" height="15"/>Work with us</a>
                 </li>
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.png" alt="#"  width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.svg" alt="#"  width="15" height="15"/></a>
                 </li>
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/instagramlogo.png" alt="#"  width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/instagramlogo.svg" alt="#"  width="15" height="15"/></a>
                 </li>
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.png" alt="#"  width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.svg" alt="#"  width="15" height="15"/></a>
                 </li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="Ontsloh">
-            <a href="medee.html"><img src="images/image1.jpg" alt="" width="900" height="600" /></a>
-                <p class="menu-button"><a href="medee.html" class="button">Recommends</a></p>
-                <h3>Lorem ipsum dolor sit amet </h3>
-        </section>
-        <section class="Recent news">
-            <header>
-                <h1>New</h1>
-            </header>
-            <ul class="style">
-                <li>
-                    <p class="posted">August 11, 2002 </p>
-                    <a href="medee.html" class="image full"><img src="images/image2.jpg" alt="" width="200" height="200"/></a>
-                    <p class="text">
-                        <a href="medee.html"> Lorem ipsum dolor sit amet.</a>
-                        Nullam non wisi a sem eleifend. Donec mattis libero eget urna.
-                    </p>
-                </li>
-                <li>
-                    <p class="text">
-                        <a href="medee.html"> Lorem ipsum dolor sit amet.</a>
-                        Nullam non wisi a sem eleifend. Donec mattis libero eget urna.
-                    </p>
-                    <a href="medee.html" class="image full"><img src="images/image3.jpg" alt="" width="200" height="200" /></a>
-                </li>
-                <li>
-                    <p class="text">
-                       <a href="medee.html"> Lorem ipsum dolor sit amet.</a>
-                        Nullam non wisi a sem eleifend. Donec mattis libero eget urna.
-                    </p>
-                    <a href="medee.html" class="image full"><img src="images/image4.jpg" alt="" width="200" height="200"/></a>
-                </li>
-                <li>
-                    <p class="text">
-                        <a href="medee.html"> Lorem ipsum dolor sit amet.</a>
-                        Nullam non wisi a sem eleifend. Donec mattis libero eget urna.
-                    </p>
-                    <a href="medee.html" class="image full"><img src="images/image5.jpg" alt="" width="200" height="200" /></a>
-                </li>
-            </ul>
-        </section>
-				<div class="Recommended">
-					<div class="za">
-						<a href="medee.html" class="image full"><img src="images/image6.jpg" alt="" width="450" height="350"/></a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, inventore.</p>
-						<p><a href="medee.html" class="button">More Details</a></p>
-					</div>
-					<div class="za">
-						<a href="medee.html" class="image full"><img src="images/image7.jpg" alt="" width="450" height="350"/></a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, inventore.</p>
-						<p><a href="medee.html" class="button">More Details</a></p>
-					</div>
-					<div class="za">
-						<a href="medee.html" class="image full"><img src="images/image8.jpg" alt="" width="450" height="350"/></a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, inventore.</p>
-						<p><a href="medee.html" class="button">More Details</a></p>
-					</div>
-                    <div class="za">
-						<a href="medee.html" class="image full"><img src="images/image9.jpg" alt="" width="450" height="350"/></a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, inventore.</p>
-						<p><a href="medee.html" class="button">More Details</a></p>
-					</div>
-					<div class="za">
-						<a href="medee.html" class="image full"><img src="images/image10.jpg" alt="" width="450" height="350" /></a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, inventore.</p>
-						<p><a href="medee.html" class="button">More Details</a></p>
-					</div>
-					<div class="za">
-						<a href="medee.html" class="image full"><img src="images/image11.jpg" alt="" width="450" height="350"/></a>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, inventore.</p>
-						<p><a href="medee.html" class="button">More Details</a></p>
-					</div>
+        <div id="page-wrapper">
+            <div id="page" class="container">
+                <div id="content">
+                    <div class="title">
+                        <h2>Lorem ipsum dolor sit amet consectetur</h2>
+                        <span class="byline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex</span>
+                    </div>
+                    <p class="menu-button"><a href="medee.html" class="button">Recommends</a></p>
+                </div>
+                <div id="sidebar"><a href="#" class="image image-full"><img src="images/image1.jpg" alt="" /></a></div>
+            </div>
+            </div>       
+            
+            
+            <section id="posts"></section>
+            
+
+
+            <div id="ontsloh-wrapper">
+                <div id="ontsloh" class="container">
+                    <div class="major">
+                        <h2>Suspendisse lacus turpis</h2>
+                        <span class="byline">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+                    </div>
+                    <div class="column1">
+                        <a href="#" class="image image-full"><img src="images/image6.jpg" height="150" alt="" /></a>
+                        <div class="box">
+                            <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie.</p>
+                            <a href="#" class="button">Read More</a>
+                        </div>
+                    </div>			
+                    <div class="column2">
+                        <a href="#" class="image image-full"><img src="images/image7.jpg" height="150" alt="" /></a>
+                        <div class="box">
+                            <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie.</p>
+                            <a href="#" class="button">Read More</a>
+                        </div>
+                    </div>			
+                    <div class="column3">
+                        <a href="#" class="image-full"><img src="images/image8.jpg" height="150" alt="" /></a>
+                        <div class="box">
+                            <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie.</p>
+                            <a href="#" class="button">Read More</a>
+                        </div>
+                    </div>			
+                    <div class="column4">
+                        <a href="#" class="image image-full"><img src="images/image9.jpg" height="150" alt="" /></a>
+                        <div class="box">
+                            <p>Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Mauris quam enim, molestie.</p>
+                            <a href="#" class="button">Read More</a>
+                        </div>
+                    </div>			
+                </div>
+            </div>
+				
 				</div>
     </main>
     <footer>
-        <div class="footer">
-                <div class="za">
-                    <a href="medee.html"> <img src="images/unreadlogo.png" alt="" class="logo" width="200" height="160"></a>
-                    <section>
-                        <ul class="default">
-                            <li><h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam maiores nostrum reiciendis laborum ab ipsum.</h4></li>
-                            <li><h5 >© 2015-2021 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eos quos amet repellat eaque asperiores a voluptatum! Debitis nam velit ipsam esse, libero repudiandae unde omnis minus eveniet sint ducimus?</h5></li>
-                        </ul>
-                        <ul class="icons">
-                            <li>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.png" alt="#" width="100" height="100"/></a>
-                                <a href="medee.html"><img style="margin-right: 15px;" src="images/instagramlogo.png" alt="#" width="100" height="100"/></a>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.png" alt="#" width="100" height="100"/></a>                     
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/youtubelogo.png" alt="#" width="100" height="90" /></a>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/linkedinlogo.svg" alt="#" width="100" height="100"/></a>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/soundcloudlogo.svg" alt="#" width="100" height="100"/></a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li> <a href="medee.html"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam modi blanditiis doloribus repellat labore quibusdam nobis nulla, ex, aliquam perferendis quia id deserunt quas, minima praesentium consectetur officiis </a></li>
-                        </ul>
-                    </section>
-                </div>
+        <div id="contact" class="container">
+            <div class="major">
+                <div id="copyright" class="container">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quaerat quia delectus dignissimos veritatis architecto doloribus deserunt est. Quae nemo id quam corporis? Repudiandae vero quam, deleniti odio asperiores explicabo tempora assumenda aperiam nam cupiditate minus, consequatur architecto perferendis corporis maiores in eligendi, adipisci saepe! A accusamus fugit adipisci culpa aliquid perferendis in suscipit consequatur, non saepe explicabo quas provident enim ipsam, totam, placeat nulla laborum animi quos? Eligendi accusamus magni qui distinctio rem, asperiores mollitia neque quis explicabo a reiciendis impedit, quaerat est illo dolorum dicta eos nam nemo iste eaque hic, voluptates cumque optio! Cupiditate dolorum labore iste.</p>
+                    </div>
             </div>
+            <ul class="contact">
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/linkedinlogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/instagramlogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/soundcloudlogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/youtubelogo.svg" alt="#" width="100" height="100"/></a></li>
+            </ul>
+        </div>
+        <div id="copyright" class="container">
+        <p> © 2015-2021 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eos quos amet repellat eaque asperiores a voluptatum! Debitis nam velit ipsam esse, libero repudiandae unde omnis minus eveniet sint ducimus</p>
+        </div>
     </footer>
+
+    
 </body>
 </html>

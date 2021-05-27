@@ -6,33 +6,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мэдээний дэлгэрэнгүй хэсэг</title>
     <meta name="Description" content="Web development lab Webpage">
+    <style>
+        body {
+		display: block;
+		margin:0;
+		padding:0;
+		font-family:'Source Sans Pro',sans-serif;
+		font-size:12pt;
+		font-weight:400;
+		color:#4E4D4D;
+}
+
+	#header {
+		position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.95);
+		height: 3em;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+	}
+
+		#header h1 {
+			position: absolute;
+			left: 1em;
+			top: 0;
+			height: 3em;
+			line-height: 3em;
+			cursor: default;
+				font-size: 1.25em;
+			}
+
+		#header nav {
+			position: absolute;
+			right: 0.5em;
+			top: 0;
+			height: 3em;
+			line-height: 3em;
+		}
+
+			#header nav ul {
+				margin: 0;
+			}
+
+				#header nav ul li {
+					display: inline-block;
+					margin-left: 0.1em;
+					font-size: 0.9em;
+				}
+
+					#header nav ul li a {
+						display: block;
+						color: inherit;
+						text-decoration: none;
+						height: 3em;
+						line-height: 3em;
+						padding: 0 0.3em 0 0.3em;
+						outline: 0;
+					}
+
+		@media screen and (max-width: 736px) {
+
+			#header {
+				height: 2.5em;
+				line-height: 2.5em;
+			}
+
+				#header h1 {
+					text-align: center;
+					position: relative;
+					left: 0;
+					top: 0;
+					height: 2.5em;
+					line-height: 2.5em;
+				}
+
+					#header h1 a {
+						font-size: 1em;
+					}
+
+				#header nav {
+					display: none;
+				}
+
+		}
+
+	body {
+		padding-top: 3em;
+	}
+
+		@media screen and (max-width: 736px) {
+
+			body {
+				padding-top: 2.5em;
+			}
+
+		}
+        header
+	{
+		margin-bottom: 2em;
+		line-height: 1.7em;
+	}
+	
+		header h2
+		{
+			font-size: 2.5em;
+		}
+
+		header .byline
+		{
+			display: block;
+			margin: 0.5em 0 0 0;
+			padding: 0 0 0.5em 0;
+			text-transform: uppercase;
+			font-size: 1.4em;
+		}
+        .button
+		{
+			position: relative;
+			display: inline-block;
+			margin-top: 0.5em;
+			padding: 0.50em 0.5em;
+			background: #e95d3c;
+			border-radius: 3px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1.0em;
+			color: #FFF;
+			cursor: pointer;
+		}
+
+			.button:hover
+			{
+				background: #de3d27;
+				color: #FFF !important;
+			}
+            .header
+	{
+		position: relative;
+		background: #FFF;
+	}
+
+		.main-menu
+		{
+			position: relative;
+			padding: 4em 0em;
+		}
+        #contact .major h2,
+	#contact .major .byline
+	{
+		color: rgba(255,255,255,0.9);
+	}
+    ul.contact
+	{
+		overflow:  hidden;
+		margin: 0em 0 3em 0;
+		padding-top: 1em;
+		text-align: center;
+	}
+	
+	ul.contact li
+	{
+		display: inline-block;
+		padding: 0em 0.30em;
+		font-size: 1em;
+	}
+	
+	ul.contact li span
+	{
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.contact li a
+	{
+		color: #FFF;
+	}
+	
+	ul.contact li a:before
+	{
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 2em;
+		color: rgba(255,255,255,.3);
+	}
+    #copyright
+	{
+		overflow: hidden;
+		padding: 5em 0em;
+	}
+	
+	#copyright p
+	{
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.80em;
+		color: #6F6F6F;
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: #8C8C8C;
+	}
+    footer{
+        background-color: #282220;
+    }
+    .medee h1 {
+        text-align: center;
+    }
+    </style>
 </head>
 <body>
-    <header class="main-header">
-        <a href="medee.html"> <img src="images/unreadlogo.png" alt="logo" class="logo" width="200" height="120"></a>
-        <nav class="main-menu">
-            <ul class="main-menu-list">
+    <header id="header">
+        <a href="medee.html"> <img src="images/unreadlogo.png" alt="logo" class="logo" width="200" height="47`"></a>
+        <nav>
+            <ul>
                 <li class="menu-item"><a href="medee.html">Technology</a> </li>
                 <li class="menu-item"><a href="medee.html">Watch</a> </li>
                 <li class="menu-item"><a href="medee.html">Recommends</a> </li>
                 <li class="menu-item"><a href="medee.html">Book</a> </li>
                 <li class="menu-item"><a href="medee.html">Podcast</a> </li>
-            </ul>
-            <ul class="icons">
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/searchicon.png" alt="" width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/searchicon.png" alt="" width="15" height="15"/></a>
                 </li>
                 <li>
-                    <a href="medee.html"><img style="margin-right: 15px;" src="images/mailicon.png" alt="#"  width="20" height="20"/>Work with us</a>
+                    <a href="medee.html"><img style="margin-right: 15px;" src="images/mailicon.png" alt="#"  width="15" height="15"/>Work with us</a>
                 </li>
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.png" alt="#"  width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.png" alt="#"  width="15" height="15"/></a>
                 </li>
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/instagramlogo.png" alt="#"  width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/instagramlogo.png" alt="#"  width="15" height="15"/></a>
                 </li>
                 <li>
-                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.png" alt="#"  width="20" height="20"/></a>
+                    <a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.png" alt="#"  width="15" height="15"/></a>
                 </li>
             </ul>
         </nav>
@@ -53,14 +268,14 @@
                         <h4>Book</h4>
                         Nullam non wisi a sem eleifend. Donec mattis libero eget urna.
                     </a>
-                    <img src="images/image4.jpg" alt="" width="100" height="150"/>
+                    <img src="images/image7.jpg" alt="" width="100" height="150"/>
                 </li>
                 <li>
                     <a class="text1">
                         <h4>Recommends</h4>
                         Nullam non wisi a sem eleifend. Donec mattis libero eget urna.
                     </a>
-                    <img src="images/image5.jpg" alt="" width="100" height="150"/>
+                    <img src="images/image8.jpg" alt="" width="100" height="150"/>
                 </li>
                 <li>
                     <a class="text1">
@@ -74,30 +289,24 @@
         </section>
     </main>
     <footer>
-        <div class="footer">
-                <div class="za">
-                    <a href="medee.html"> <img src="images/unreadlogo.png" alt="" class="logo" width="200" height="160"></a>
-                    <section>
-                        <ul class="default">
-                            <li><h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam maiores nostrum reiciendis laborum ab ipsum.</h4></li>
-                            <li><h5 >© 2015-2021 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eos quos amet repellat eaque asperiores a voluptatum! Debitis nam velit ipsam esse, libero repudiandae unde omnis minus eveniet sint ducimus?</h5></li>
-                        </ul>
-                        <ul class="icons">
-                            <li>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.png" alt="#" width="100" height="100"/></a>
-                                <a href="medee.html"><img style="margin-right: 15px;" src="images/instagramlogo.png" alt="#" width="100" height="100"/></a>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.png" alt="#" width="100" height="100"/></a>                     
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/youtubelogo.png" alt="#" width="100" height="90" /></a>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/linkedinlogo.svg" alt="#" width="100" height="100"/></a>
-                                <a href="medee.html"> <img style="margin-right: 15px;" src="images/soundcloudlogo.svg" alt="#" width="100" height="100"/></a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li> <a href="medee.html"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam modi blanditiis doloribus repellat labore quibusdam nobis nulla, ex, aliquam perferendis quia id deserunt quas, minima praesentium consectetur officiis </a></li>
-                        </ul>
-                    </section>
-                </div>
+        <div id="contact" class="container">
+            <div class="major">
+                <div id="copyright" class="container">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quaerat quia delectus dignissimos veritatis architecto doloribus deserunt est. Quae nemo id quam corporis? Repudiandae vero quam, deleniti odio asperiores explicabo tempora assumenda aperiam nam cupiditate minus, consequatur architecto perferendis corporis maiores in eligendi, adipisci saepe! A accusamus fugit adipisci culpa aliquid perferendis in suscipit consequatur, non saepe explicabo quas provident enim ipsam, totam, placeat nulla laborum animi quos? Eligendi accusamus magni qui distinctio rem, asperiores mollitia neque quis explicabo a reiciendis impedit, quaerat est illo dolorum dicta eos nam nemo iste eaque hic, voluptates cumque optio! Cupiditate dolorum labore iste.</p>
+                    </div>
             </div>
+            <ul class="contact">
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/facebooklogo.png" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/twitterlogo.png" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/linkedinlogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/instagramlogo.png" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/soundcloudlogo.svg" alt="#" width="100" height="100"/></a></li>
+                <li><a href="medee.html"> <img style="margin-right: 15px;" src="images/youtubelogo.png" alt="#" width="100" height="100"/></a></li>
+            </ul>
+        </div>
+        <div id="copyright" class="container">
+        <p> © 2015-2021 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eos quos amet repellat eaque asperiores a voluptatum! Debitis nam velit ipsam esse, libero repudiandae unde omnis minus eveniet sint ducimus</p>
+        </div>
     </footer>
 </body>
 </html>
