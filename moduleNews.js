@@ -12,6 +12,7 @@ export  let News = {
  })
 }
 export function getPosts(url, callMeBack) {
+    
     fetch(url)
     .then(response => response.json())
         .then(data => {
