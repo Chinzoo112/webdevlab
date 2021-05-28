@@ -21,7 +21,7 @@
             "purpose": "any maskable"
         },
         {
-            "src": "icons/webdevlab_192x192.png.png",
+            "src": "icons/webdevlab_384x384.png",
             "sizes": "384x384",
             "type": "image/png",
             "purpose": "any maskable"
@@ -45,7 +45,7 @@
             "purpose": "any maskable"
         },
         {
-            "src": "icons/webdevlab_512x512.png",
+            "src": "icons/webdevlab_48x48.png",
             "sizes": "48x48",
             "type": "image/png",
             "purpose": "any maskable"
